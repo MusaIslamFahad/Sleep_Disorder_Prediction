@@ -27,4 +27,3 @@ The dataset used in this project contains anonymized health and behavioral data 
 ## 🚀 Objective
 
 To build a predictive model that can identify individuals likely to suffer from sleep disorders, aiding in early diagnosis and preventive care.
-
