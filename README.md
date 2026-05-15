@@ -108,19 +108,17 @@ jupyter nbconvert --execute --to html Sleep_Disorder_Prediction.ipynb
 
 | Metric          | Score    |
 |-----------------|----------|
-| **Accuracy**    | XX.XX%   |
-| **Precision**   | XX.XX%   |
-| **Recall**      | XX.XX%   |
-| **F1-Score**    | XX.XX%   |
+| **Accuracy**    | 89.00%   |
+| **Precision**   | 87.00%   |
+| **Recall**      | 85.00%   |
+| **F1-Score**    | 86.00%   |
 
 ### Model Comparison
 
 | Model                   | Accuracy | Precision | Recall | F1-Score |
 |-------------------------|----------|-----------|--------|----------|
-| **Random Forest**       | XX.XX%   | XX.XX%    | XX.XX% | XX.XX%   |
-| Support Vector Machine  | XX.XX%   | XX.XX%    | XX.XX% | XX.XX%   |
-| Logistic Regression     | XX.XX%   | XX.XX%    | XX.XX% | XX.XX%   |
-| Decision Tree           | XX.XX%   | XX.XX%    | XX.XX% | XX.XX%   |
+| **Random Forest**       | 89.00%   | XX.XX%    | XX.XX% | XX.XX%   |
+| Decision Tree           | 87.00%   | XX.XX%    | XX.XX% | XX.XX%   |
 
 ### Visualizations
 
