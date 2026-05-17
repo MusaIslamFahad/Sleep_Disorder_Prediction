@@ -39,48 +39,51 @@ Six classifiers are trained and compared. **Logistic Regression and SVM both ach
 ---
 
 # 🖼️ Results & Visualizations
-
 This section showcases the key visual outputs, evaluation results, and model insights generated during the **Sleep Disorder Prediction** project.
 
 ---
 
 ## 📊 Exploratory Data Analysis (EDA)
 
-| Target Variable Distribution                                | Univariate Distributions                                    |
+| Numeric Feature Distributions                               | Key Feature Relationships with Sleep Disorder               |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
 | <img src="Result image/__results___16_0.png" width="100%"/> | <img src="Result image/__results___18_0.png" width="100%"/> |
 
-| Sleep Disorder vs Features                                  | Occupation vs Sleep Disorder                                |
-| ----------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="Result image/__results___20_0.png" width="100%"/> | <img src="Result image/__results___22_0.png" width="100%"/> |
+| Occupation vs Sleep Disorder (sorted by disorder prevalence) | Pairplot of Key Features                                    |
+| ------------------------------------------------------------ | ----------------------------------------------------------- |
+| <img src="Result image/__results___20_0.png" width="100%"/>  | <img src="Result image/__results___22_0.png" width="100%"/> |
 
-| Pairplot Analysis                                           | Correlation Heatmap                                         |
-| ----------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="Result image/__results___24_0.png" width="100%"/> | <img src="Result image/__results___30_0.png" width="100%"/> |
+| Correlation Matrix (Lower Triangle)                         |
+| ----------------------------------------------------------- |
+| <img src="Result image/__results___24_0.png" width="100%"/> |
 
 ---
 
 ## 🤖 Model Performance & Evaluation
 
-| Multi-Model Benchmarking                                    | Hyperparameter Tuning                                       |
+| Model Comparison - 5-Fold Cross-Validation Accuracy        | Tuned XGBoost - Test Set Performance                        |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="Result image/__results___35_0.png" width="100%"/> | <img src="Result image/__results___39_0.png" width="100%"/> |
+| <img src="Result image/__results___30_0.png" width="100%"/> | <img src="Result image/__results___35_0.png" width="100%"/> |
 
-| Final Model Evaluation                                      | Model Comparison Summary                                    |
+| All Models - Test Accuracy & F1 Score                       | Permutation Feature Importance - XGBoost (Tuned)            |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="Result image/__results___41_0.png" width="100%"/> | <img src="Result image/__results___45_2.png" width="100%"/> |
+| <img src="Result image/__results___39_0.png" width="100%"/> | <img src="Result image/__results___41_0.png" width="100%"/> |
 
 ---
 
 ## 🔍 Feature Importance & Explainability
 
-| Feature Importance                                          | SHAP Summary Plot                                           |
+| SHAP Feature Importance - XGBoost Tuned (Mean \|SHAP\|)    | SHAP Summary Plot - Class: Insomnia                              |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="Result image/__results___46_1.png" width="100%"/> | <img src="Result image/__results___46_3.png" width="100%"/> |
+| <img src="Result image/__results___45_2.png" width="100%"/> | <img src="Result image/__results___46_1.png" width="100%"/> |
 
-| SHAP Dependence Analysis                                    | Interactive Prediction Demo                                 |
+| SHAP Summary Plot - Class: Sleep Apnea                      | SHAP Summary Plot - Class: None                             |
 | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| <img src="Result image/__results___46_5.png" width="100%"/> | <img src="Result image/__results___47_1.png" width="100%"/> |
+| <img src="Result image/__results___46_3.png" width="100%"/> | <img src="Result image/__results___46_5.png" width="100%"/> |
+
+| SHAP Force Plot - Single Prediction Example                 |
+| ----------------------------------------------------------- |
+| <img src="Result image/__results___47_1.png" width="100%"/> |
 
 ---
 
@@ -111,7 +114,7 @@ This section showcases the key visual outputs, evaluation results, and model ins
  
 ## 📊 Dataset
  
-**Source:** [Kaggle — Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
+**Source:** [Kaggle - Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
 **Size:** 374 records · 13 raw features · included in repo (no separate download needed)
  
 | Feature | Type | Description |
@@ -339,7 +342,7 @@ Contributions are welcome!
  
 ## 🙏 Acknowledgments
  
-- [Kaggle — Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) for the data
+- [Kaggle - Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) for the data
 - [Scikit-learn](https://scikit-learn.org/) for the complete ML toolkit
 - [XGBoost](https://xgboost.readthedocs.io/) for the gradient boosting implementation
 ---
