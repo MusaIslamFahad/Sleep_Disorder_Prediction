@@ -1,172 +1,354 @@
 <div align="center">
 
-  # 💤 Sleep Disorder Prediction
+# 😴 Sleep Disorder Prediction
 
-  **Machine Learning Model to Predict Sleep Disorders**  
-  *Insomnia • Sleep Apnea • No Disorder*
+A supervised ML classification project that predicts sleep disorders- Insomnia, Sleep Apnea, or None from health and lifestyle features including age, BMI, stress level, sleep duration, and blood pressure, using Logistic Regression, Random Forest, and SVM.
 
-  [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
-  [![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-  [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-  [![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+<p align="center">
 
-  [![License](https://img.shields.io/github/license/MusaIslamFahad/Sleep_Disorder_Prediction?style=for-the-badge)](LICENSE)
-  [![Stars](https://img.shields.io/github/stars/MusaIslamFahad/Sleep_Disorder_Prediction?style=for-the-badge)](https://github.com/MusaIslamFahad/Sleep_Disorder_Prediction/stargazers)
+<img src="https://img.shields.io/badge/Python-3.9+-0f172a?style=for-the-badge&logo=python&logoColor=FFD43B" />
+<img src="https://img.shields.io/badge/Notebook-Jupyter-0f172a?style=for-the-badge&logo=jupyter&logoColor=F97316" />
+<img src="https://img.shields.io/badge/ML-Scikit--Learn-0f172a?style=for-the-badge&logo=scikitlearn&logoColor=F7931E" />
+<img src="https://img.shields.io/badge/Data-Pandas-0f172a?style=for-the-badge&logo=pandas&logoColor=38BDF8" />
+<img src="https://img.shields.io/badge/License-MIT-0f172a?style=for-the-badge&logo=opensourceinitiative&logoColor=22C55E" />
+<img src="https://img.shields.io/github/stars/MusaIslamFahad/sleep-disorder-prediction?style=for-the-badge&logo=github&label=GitHub%20Stars&color=0f172a" />
+
+</p>
 
 </div>
 
-## 📋 Table of Contents
-- [Overview](#-overview)
-- [Features](#-features)
-- [Dataset](#-dataset)
-- [Project Workflow](#-project-workflow)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Results & Model Performance](#-results--model-performance)
-- [Technologies Used](#-technologies-used)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [License](#-license)
+---
 
-## ✨ Overview
+## 📖 Overview
+ 
+**Sleep Health Classifier** is an end-to-end machine learning project that predicts whether a person has **Insomnia**, **Sleep Apnea**, or **No Disorder** based on real-world health and lifestyle data. The notebook covers the full supervised classification pipeline- EDA, feature engineering, multi-model benchmarking with 5-fold stratified cross-validation, hyperparameter tuning via GridSearchCV, and a final test-set evaluation.
+ 
+Six classifiers are trained and compared. **Logistic Regression and SVM both achieve 97.33% test accuracy**, with SVM leading on cross-validation (89.62%). The project also includes clinically meaningful engineered features like Pulse Pressure, Sleep Efficiency, and Activity-to-Stress Ratio that go beyond the raw dataset columns.
+ 
+> 💤 Sleep disorders affect over **1 billion people** worldwide and are linked to cardiovascular disease, obesity, and mental health issues. Early detection through lifestyle data can enable timely intervention.
+ 
+---
+ 
+## 📓 Open the Notebook
+ 
+| Viewer | Link |
+|--------|------|
+| **NBViewer** (static render) | [View on NBViewer](https://nbviewer.org/github/MusaIslamFahad/sleep-disorder-prediction/blob/main/sleep-disorder-prediction.ipynb) |
+| **Google Colab** (run in browser) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MusaIslamFahad/sleep-disorder-prediction/blob/main/sleep-disorder-prediction.ipynb) |
+ 
+---
 
-This project develops a **machine learning classification model** that predicts sleep disorders (Insomnia, Sleep Apnea, or None) based on lifestyle, physical activity, stress levels, and demographic factors.
+# 🖼️ Results & Visualizations
 
-The goal is to help identify individuals at risk of sleep disorders using data-driven insights for early intervention and better healthcare outcomes.
+This section showcases the key visual outputs, evaluation results, and model insights generated during the **Sleep Disorder Prediction** project.
 
-## 🚀 Features
+---
 
-- ✅ Comprehensive **Exploratory Data Analysis (EDA)**
-- ✅ Data cleaning and preprocessing
-- ✅ Feature engineering and selection
-- ✅ Multiple classification models (Random Forest, SVM, Logistic Regression, etc.)
-- ✅ Model evaluation with confusion matrix, classification report & ROC curves
-- ✅ Interactive visualizations using Seaborn & Matplotlib
-- ✅ Jupyter Notebook with step-by-step explanations
+## 📊 Exploratory Data Analysis (EDA)
 
+| Target Variable Distribution                                | Univariate Distributions                                    |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___16_0.png" width="100%"/> | <img src="Result image/__results___18_0.png" width="100%"/> |
+
+| Sleep Disorder vs Features                                  | Occupation vs Sleep Disorder                                |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___20_0.png" width="100%"/> | <img src="Result image/__results___22_0.png" width="100%"/> |
+
+| Pairplot Analysis                                           | Correlation Heatmap                                         |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___24_0.png" width="100%"/> | <img src="Result image/__results___30_0.png" width="100%"/> |
+
+---
+
+## 🤖 Model Performance & Evaluation
+
+| Multi-Model Benchmarking                                    | Hyperparameter Tuning                                       |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___35_0.png" width="100%"/> | <img src="Result image/__results___39_0.png" width="100%"/> |
+
+| Final Model Evaluation                                      | Model Comparison Summary                                    |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___41_0.png" width="100%"/> | <img src="Result image/__results___45_2.png" width="100%"/> |
+
+---
+
+## 🔍 Feature Importance & Explainability
+
+| Feature Importance                                          | SHAP Summary Plot                                           |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___46_1.png" width="100%"/> | <img src="Result image/__results___46_3.png" width="100%"/> |
+
+| SHAP Dependence Analysis                                    | Interactive Prediction Demo                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| <img src="Result image/__results___46_5.png" width="100%"/> | <img src="Result image/__results___47_1.png" width="100%"/> |
+
+---
+
+## ✨ Highlights
+
+* Comprehensive **Exploratory Data Analysis (EDA)**
+* Multi-model machine learning benchmarking
+* Hyperparameter tuning for performance optimization
+* Feature importance visualization
+* SHAP-based explainability analysis
+* Interactive prediction system for real-world usage
+
+---
+
+> _All visualizations and results were generated from the Sleep Disorder Prediction notebook._
+ 
+---
+ 
+## 🎯 Target Classes
+ 
+| Class | Description |
+|-------|-------------|
+| `None` | No sleep disorder detected |
+| `Insomnia` | Difficulty falling or staying asleep |
+| `Sleep Apnea` | Breathing interruptions during sleep |
+ 
+---
+ 
 ## 📊 Dataset
-
-- **Source**: [Kaggle Sleep Health and Lifestyle Dataset] (Add actual link if available)
-- **Target Variable**: `Sleep Disorder` (Insomnia, Sleep Apnea, None)
-- **Key Features**: Age, Gender, Occupation, Sleep Duration, Quality of Sleep, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps, etc.
-
-## 🔄 Project Workflow
-
-1. Data Loading & Understanding
-2. Exploratory Data Analysis
-3. Data Preprocessing & Feature Engineering
-4. Model Training & Hyperparameter Tuning
-5. Model Evaluation & Comparison
-6. Conclusion & Insights
-
-## 💻 Installation
-
+ 
+**Source:** [Kaggle — Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
+**Size:** 374 records · 13 raw features · included in repo (no separate download needed)
+ 
+| Feature | Type | Description |
+|---------|------|-------------|
+| `Age` | Integer | Age in years |
+| `Gender` | Categorical | Male / Female |
+| `Occupation` | Categorical | Job type |
+| `Sleep Duration` | Float | Hours of sleep per night |
+| `Quality of Sleep` | Integer | Self-rated quality (1–10) |
+| `Physical Activity Level` | Integer | Daily activity minutes |
+| `Stress Level` | Integer | Self-rated stress (1–10) |
+| `BMI Category` | Categorical | Normal / Overweight / Obese |
+| `Blood Pressure` | String | `"Systolic/Diastolic"` — split into two numeric columns |
+| `Heart Rate` | Integer | Resting heart rate (bpm) |
+| `Daily Steps` | Integer | Steps per day |
+| `Sleep Disorder` | Categorical | **Target**- None / Insomnia / Sleep Apnea |
+ 
+---
+ 
+## ⚙️ Feature Engineering
+ 
+Four clinically meaningful features are derived from the raw columns to improve model performance:
+ 
+| Engineered Feature | Formula | Clinical Meaning |
+|--------------------|---------|-----------------|
+| `Pulse_Pressure` | `Systolic_BP − Diastolic_BP` | Cardiovascular risk marker |
+| `Sleep_Efficiency` | `Quality of Sleep ÷ Sleep Duration` | Quality per hour of sleep |
+| `Activity_Stress_Ratio` | `Physical Activity ÷ (Stress Level + 1)` | Balance of activity vs. stress |
+| `High_BP_Flag` | `1 if Systolic ≥ 130 else 0` | Binary hypertension indicator |
+ 
+---
+ 
+## 🔬 ML Pipeline
+ 
+```
+Raw CSV (Sleep_health_and_lifestyle_dataset.csv)
+        │
+        ▼
+① Load & Inspect
+        │  → Shape, dtypes, null counts, class distribution
+        ▼
+② Data Preprocessing
+        │  → Fill Sleep Disorder NaN → "None"
+        │  → Split "Blood Pressure" string → Systolic_BP + Diastolic_BP (numeric)
+        │  → Drop Person ID
+        ▼
+③ Feature Engineering
+        │  → Pulse_Pressure, Sleep_Efficiency
+        │  → Activity_Stress_Ratio, High_BP_Flag
+        ▼
+④ Exploratory Data Analysis (EDA)
+        │  → Disorder distribution (pie + countplot)
+        │  → Univariate histograms (9 numeric features)
+        │  → Disorder vs Gender, BMI, Age, Occupation
+        │  → Pairplot (Age, Sleep Duration, Stress, Systolic_BP)
+        │  → Correlation heatmap
+        ▼
+⑤ Encode & Scale
+        │  → Label encode: Gender, Occupation, BMI Category, Sleep Disorder
+        │  → Train / Test split — 80/20, stratified, random_state=42
+        │  → StandardScaler for distance-based models (LR, KNN, SVM)
+        ▼
+⑥ Multi-Model Benchmarking
+        │  → 6 classifiers × 5-fold Stratified K-Fold CV
+        │  → Ranked by CV Mean Accuracy
+        ▼
+⑦ Hyperparameter Tuning
+        │  → GridSearchCV on SVM (C, gamma, kernel)
+        │  → GridSearchCV on XGBoost (n_estimators, max_depth)
+        ▼
+⑧ Final Test-Set Evaluation
+        │  → Confusion Matrix, Classification Report
+        │  → ROC Curve (multi-class One-vs-Rest)
+        ▼
+⑨ Full Model Comparison Summary
+           → All 7 models ranked by Test Accuracy & Weighted F1
+```
+ 
+---
+ 
+## 📈 Results
+ 
+### Cross-Validation Ranking (5-Fold Stratified)
+ 
+| Rank | Model | CV Mean Accuracy | CV Std |
+|------|-------|-----------------|--------|
+| 🥇 1 | **Support Vector Machine** | **89.62%** | ±2.01% |
+| 2 | XGBoost | 88.63% | ±2.22% |
+| 3 | Logistic Regression | 88.60% | ±3.83% |
+| 4 | Random Forest | 88.29% | ±2.11% |
+| 5 | K-Nearest Neighbors | 87.60% | ±4.89% |
+| 6 | Decision Tree | 85.63% | ±4.99% |
+ 
+---
+ 
+### Test Set Performance (Final Evaluation)
+ 
+| Rank | Model | Test Accuracy | F1 (Weighted) |
+|------|-------|--------------|---------------|
+| 🥇 1 | **Logistic Regression** | **97.33%** | **97.35%** |
+| 🥇 1 | **Support Vector Machine** | **97.33%** | 97.32% |
+| 3 | K-Nearest Neighbors | 96.00% | 96.00% |
+| 3 | Random Forest | 96.00% | 96.06% |
+| 3 | ★ XGBoost (Tuned) | 96.00% | 96.00% |
+| 6 | Decision Tree | 94.67% | 94.78% |
+| 7 | XGBoost (untuned) | 93.33% | 93.45% |
+ 
+---
+ 
+### Key Takeaways
+ 
+- **Logistic Regression and SVM tie at 97.33% test accuracy**: the top performers on unseen data
+- **SVM leads cross-validation (89.62%)**: most consistent across all 5 folds
+- **Hyperparameter tuning matters**: XGBoost jumps from 93.33% → 96.00% after GridSearchCV
+- **Decision Tree overfits**: highest variance (CV Std ±4.99%), lowest generalization
+- The strong overall performance reflects how well `Stress Level`, `BMI Category`, `Sleep Duration`, and the engineered `Pulse_Pressure` separate the three disorder classes
+---
+ 
+## 🛠️ Tech Stack
+ 
+| Library | Purpose |
+|---------|---------|
+| `pandas` | Data loading, cleaning, manipulation |
+| `numpy` | Numerical operations |
+| `matplotlib` / `seaborn` | EDA visualizations and results plots |
+| `scikit-learn` | Preprocessing, all classical models, GridSearchCV, evaluation |
+| `xgboost` | Gradient boosting classifier + hyperparameter tuning |
+| `Jupyter Notebook` | Interactive development environment |
+ 
+---
+ 
+## ⚙️ Requirements
+ 
+- Python 3.9+
+- `pandas`
+- `numpy`
+- `scikit-learn`
+- `xgboost`
+- `matplotlib`
+- `seaborn`
+- `jupyter`
+---
+ 
+## 🚀 Getting Started
+ 
+**1. Clone the repository**
 ```bash
-# Clone the repository
-git clone https://github.com/MusaIslamFahad/Sleep_Disorder_Prediction.git
-cd Sleep_Disorder_Prediction
-
-# Create virtual environment (optional)
+git clone https://github.com/MusaIslamFahad/sleep-disorder-prediction.git
+cd sleep-disorder-prediction
+```
+ 
+**2. (Optional) Create a virtual environment**
+```bash
 python -m venv venv
-source venv/bin/activate    # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-
+source venv/bin/activate        # macOS / Linux
+venv\Scripts\activate           # Windows
 ```
-
-## 📌 Usage
-
+ 
+**3. Install dependencies**
 ```bash
-# Clone the repository
-git clone https://github.com/MusaIslamFahad/Sleep_Disorder_Prediction.git
-cd Sleep_Disorder_Prediction
-
-# Install required dependencies
-pip install -r requirements.txt
-
-# Launch Jupyter Notebook
-jupyter notebook
-
+pip install pandas numpy scikit-learn xgboost matplotlib seaborn jupyter
 ```
-Run the main analysis:
+ 
+**4. Launch the notebook**
+```bash
+jupyter notebook sleep-disorder-prediction.ipynb
 ```
-jupyter notebook Sleep_Disorder_Prediction.ipynb
-```
-Or export as HTML report:
-```
-jupyter nbconvert --execute --to html Sleep_Disorder_Prediction.ipynb
-
-```
-
-## 📊 Results & Model Performance
-
-**Best Performing Model: Random Forest** 🎯
-
-### Performance Metrics
-
-| Metric          | Score    |
-|-----------------|----------|
-| **Accuracy**    | 89.00%   |
-| **Precision**   | 87.00%   |
-| **Recall**      | 85.00%   |
-| **F1-Score**    | 86.00%   |
-
-### Model Comparison
-
-| Model                   | Accuracy | Precision | Recall | F1-Score |
-|-------------------------|----------|-----------|--------|----------|
-| **Random Forest**       | 89.00%   | XX.XX%    | XX.XX% | XX.XX%   |
-| Decision Tree           | 87.00%   | XX.XX%    | XX.XX% | XX.XX%   |
-
-### Visualizations
-
-![Confusion Matrix](images/confusion_matrix.png)
-![ROC Curve](images/roc_curve.png)
-![Feature Importance](images/feature_importance.png)
-
-> *Random Forest outperformed other models with balanced precision and recall, making it the most reliable for sleep disorder prediction.*
-
-
+ 
+> The dataset `Sleep_health_and_lifestyle_dataset.csv` is already included; no external download needed. If running on Kaggle, the notebook auto-detects the Kaggle dataset path.
+ 
 ---
-
-## 🛠 Technologies Used
-
-- **Programming Language**: Python 3.9+
-- **Data Manipulation**: Pandas, NumPy
-- **Data Visualization**: Matplotlib, Seaborn
-- **Machine Learning**: scikit-learn
-- **Development Environment**: Jupyter Notebook
-
+ 
+## 📂 Project Structure
+ 
+```
+sleep-health-classifier/
+│
+├── sleep-disorder-prediction.ipynb          # Main notebook — full 9-step pipeline
+├── Sleep_health_and_lifestyle_dataset.csv   # Dataset (included)
+│
+├── images/
+│   ├── confusion_matrix.png                 # Confusion matrix of the best model
+│   ├── roc_curve.png                        # Multi-class ROC curve (OvR)
+│   └── feature_importance.png              # Feature importances plot
+│
+└── README.md
+```
+ 
 ---
-
-
-## 🚀 Future Improvements
-
-- [ ] Implement **Deep Learning** models (LSTM / CNN) for better performance
-- [ ] Add **Hyperparameter Tuning** using Optuna or GridSearchCV
-- [ ] Deploy the model as a **Web Application** (Streamlit / Flask)
-- [ ] Include **SHAP** or **LIME** for model explainability
-- [ ] Add support for **real-time prediction** from user input
-- [ ] Expand dataset with more diverse samples
-- [ ] Implement **cross-validation** and **ensemble techniques**
-- [ ] Create a **mobile app** version using Flutter or Android
-- [ ] Add **sleep quality scoring** and personalized recommendations
-
+ 
+## 📚 What You'll Learn
+ 
+This notebook is a strong portfolio reference for:
+ 
+- **Parsing mixed-format strings**: splitting `"120/80"` Blood Pressure into two numeric columns
+- **Clinical feature engineering**: creating Pulse Pressure, Sleep Efficiency, and Activity-Stress Ratio from domain knowledge
+- **Multi-class classification**: handling 3 target labels (None / Insomnia / Sleep Apnea) cleanly
+- **Stratified K-Fold CV**: ensuring each fold preserves class balance for fair comparison
+- **GridSearchCV hyperparameter tuning**: applied to both SVM and XGBoost
+- **Multi-class ROC curves**: One vs Rest strategy for three-class AUC
+- **Full model comparison table**: ranking all 7 models by test accuracy and weighted F1 in one view
+---
+ 
+## 🔮 Future Enhancements
+ 
+- 🧠 **SHAP explainability**: show which features drive each individual prediction
+- 🌐 **Streamlit web app**: let users input their own health data and get a live prediction
+- 📊 **Extended cross-validation**: repeated stratified K-Fold for tighter confidence intervals
+- 📱 **REST API**: Flask endpoint for integration into health monitoring apps
+- 📈 **Larger & more diverse dataset**: improve generalization across demographics
+- 🏥 **Clinical validation**: test predictions against clinician-diagnosed ground truth
+  
+---
+ 
 ## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/MusaIslamFahad/Sleep_Disorder_Prediction/issues).
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
+ 
+Contributions are welcome!
+ 
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 ---
-
-**Made with ❤️ by [Musa Islam Fahad](https://github.com/MusaIslamFahad)**
-
-
-
-
+ 
+## 🙏 Acknowledgments
+ 
+- [Kaggle — Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) for the data
+- [Scikit-learn](https://scikit-learn.org/) for the complete ML toolkit
+- [XGBoost](https://xgboost.readthedocs.io/) for the gradient boosting implementation
+---
+ 
+## 👨‍💻 Author
+ 
+**Musa Islam Fahad**
+- GitHub: [@MusaIslamFahad](https://github.com/MusaIslamFahad)
+---
+ 
+> ⭐ If this project helped your learning or research, a star would mean a lot. Thank you!
+ 
